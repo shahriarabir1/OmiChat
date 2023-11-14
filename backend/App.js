@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 const environment = require("./Environment/environment");
 const chat = require("./Router/chat");
 
-dotenv.config();
 const app = express();
+dotenv.config();
 mongoose
   .connect(process.env.MONGODB_CON)
   .then(() => {
@@ -15,7 +15,6 @@ mongoose
   .catch((err) => {
     console.log(`There is a database connection err ${err}`);
   });
-
 
 app.use("/chat", chat);
 

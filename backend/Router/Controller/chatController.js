@@ -1,5 +1,8 @@
-const chatController = (req, res) => {
+const allchat = (req, res) => {
   res.send("Api is running");
 };
+const chatIndividual = (req, res) => {
+  res.send("This is individual");
+};
 
-module.exports = { chatController };
+module.exports = { allchat, chatIndividual };
